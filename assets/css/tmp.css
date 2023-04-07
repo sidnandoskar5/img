@@ -1,0 +1,22 @@
+*{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;word-break:break-word}
+*:before,*:after {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html{text-size-adjust:none; -webkit-text-size-adjust:none;-ms-text-size-adjust:100%}
+body{font-family: 'Poppins', sans-serif;color:#111;font-size:16px;line-height:1.6;background-color:#fff;}
+.container{max-width:1200px;padding:30px 15px;margin:0 auto;}
+.overlay.active{position:fixed;width:100%;height:100vh;background:#000;opacity: 0.85; left: 0; top: 0;}
+
+.article-title{font-size:22px;line-height:32px;font-weight:700;margin:0 0 20px}
+.article-wrapper{clear:both}
+.article-img{float:left;width:350px;margin:0 20px 10px 0}
+.article-img img{display:block;width:100%;height:auto}
+
+.article-content{color:#666}
+.article-content p{font-size:14px;margin:0 0 15px}
+.article-content .info.enable{font-weight:500;color:red;cursor:pointer;position:relative;}
+.article-content .info.enable:hover{text-decoration: underline;}
+
+.dictionary{padding:70px 10px 30px 20px;position: fixed;right:-300px;width: 300px;background: #fff;height: 100vh;top: 0;max-width:100%; transition: 0.4s all ease-in-out;overflow: auto;}
+#keyword{text-transform: capitalize;}
+.dictionary.active{right:0;}
+.dictionary p{font-size:14px;margin:10px 0 0}
+.close-btn{position:absolute;top:10px; right: 10px; cursor:pointer;}
