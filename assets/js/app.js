@@ -1,5 +1,5 @@
 const app = function(){
-    const apiKey = "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";
+    const apiKey = "sk-@@appky@@R6b3xLHfxa1CC70euUTrT3BlbkFJDDO9X0mxbedPpAwUhyaQ@@appky@@";
     const apiUrl = "https://api.openai.com/v1/chat/completions";
 
     const faqsList = [
@@ -55,7 +55,7 @@ const app = function(){
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              "Authorization": `Bearer ${apiKey}`,
+              "Authorization": `Bearer ${apiKey.replace(/@@appky@@/g,'')}`,
             },
             body: JSON.stringify({
               model: "gpt-3.5-turbo",
