@@ -55,7 +55,7 @@ const app = function(){
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              "Authorization": `Bearer ${atob('c2stQEBhcHBreUBAUjZiM3hMSGZ4YTFDQzcwZXVVVHJUM0JsYmtGSkRETzlYMG14YmVkUHBBd1VoeWFRQEBhcHBreUBA').replace(/@@appky@@/g,'')}`,
+              "Authorization": `Bearer ${atob(apiKey).replace(/@@appky@@/g,'')}`,
             },
             body: JSON.stringify({
               model: "gpt-3.5-turbo",
