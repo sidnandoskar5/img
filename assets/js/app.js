@@ -1,5 +1,5 @@
 const app = function(){
-    const apiKey = "c2stQEBhcHBreUBAUjZiM3hMSGZ4YTFDQzcwZXVVVHJUM0JsYmtGSkRETzlYMG14YmVkUHBBd1VoeWFRQEBhcHBreUBA";
+    const apiKey = "c2stNmlPSlFuQ2lCa3hoSjdwOXpHdDJUM0JsYmtGSkk1alRVd0F2Y3A4aUg2UWUwU0NU";
     const apiUrl = "https://api.openai.com/v1/chat/completions";
 
     const faqsList = [
