@@ -1,0 +1,23 @@
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;word-wrap:break-word;box-sizing:border-box;margin:0;padding:0;line-height:1.6;}
+*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;}
+body{font-family:"Roboto", sans-serif;font-size:16px;font-weight:400;margin:0 auto;padding:30px 15px;color:#444}
+
+h1{font-size:28px;margin:0 0 30px}
+h2{font-size:18px;margin:0 0 30px;position: sticky; top: 0; background-color: #fff;padding: 10px 0;}
+
+.container{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:nowrap;gap:30px}
+main{flex:1 1 50%;border: 1px solid #e9e9eb;border-radius:5px;padding: 30px 20px;}
+aside{width:450px;flex:0 0 450px;padding: 30px 20px;border: 1px solid #e9e9eb;border-radius:5px;position: sticky; top: 0;}
+section{padding:20px 0}
+section:not(:last-child){border-bottom:1px solid #e9e9eb}
+section.action{text-align:center;display: flex;gap: 10px;align-items: center;justify-content: center;}
+section.action button{padding:5px 20px;border:0;outline:0;border-radius:5px; font-size:16px;font-weight:600;cursor:pointer;color:#fff}
+section.action .calculate{background-color: #4285F4;}
+section.action .reset{background-color: #EA4335;}
+
+.component-group{display:flex;flex-direction:column;gap:15px}
+.input-component{display:flex;align-items:flex-start;justify-content:space-between;gap:25px;width:100%}
+.input-component label{flex:1 1 auto;cursor:pointer}
+.input-component input,
+.input-component select{flex:0 0 115px;width:115px;height:35px;border:1px solid #e9e9eb;border-radius:5px;padding:0 10px;font-weight:600;color:#444;letter-spacing:0.6px;}

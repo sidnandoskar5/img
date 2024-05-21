@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-container">
+    <h1>Income Tax Calculator</h1>
+    <div class="container">
+        <main id="app">
+            <section class="salary">
+                <h2>Salary Income (P.A.)</h2>
+                <div class="component-group">
+                    <div class="input-component">
+                        <label for="fix-salary">Fixed Salary</label>
+                        <input id="fix-salary" type="number" min="0" max="10000000" placeholder="XX,XXX" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="salary-basic">Basic</label>
+                        <input id="salary-basic" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="salary-hra">HRA</label>
+                        <input id="salary-hra" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="salary-epf">EPF</label>
+                        <input id="salary-epf" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="salary-gratuity">Gratuity</label>
+                        <input id="salary-gratuity" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="salary-extra">Special Allowance and Flexi Pay</label>
+                        <input id="salary-extra" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required />
+                    </div>
+                </div>
+            </section>
+            <section class="additional-salary-income">
+                <h2>Additional Salary Income</h2>
+                <div class="component-group">
+                    <div class="input-component">
+                        <label for="bonus">Annual Bonus</label>
+                        <input id="bonus" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="arrears">Arrears</label>
+                        <input id="arrears" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="leaves-count">Leaves Count</label>
+                        <input id="leaves-count" type="number" min="0" max="40" placeholder="XX" value="0" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="leaves-amount">Leaves Amount</label>
+                        <input id="leaves-amount" type="number" min="0" max="10000000" placeholder="XX" value="0" required readonly/>
+                    </div>
+                </div>
+            </section>
+            <section class="future-salary">
+                <h2>Expected Raise</h2>
+                <div class="component-group">
+                    <div class="input-component">
+                        <label for="expected-appr">Expected Appraisal (%)</label>
+                        <input id="expected-appr" type="number" min="0" max="100" placeholder="XX%" required />
+                    </div>
+                    <div class="input-component">
+                        <label for="fix-future-salary">Fixed Salary</label>
+                        <input id="fix-future-salary" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                    </div>
+                    <div class="input-component">
+                        <label for="future-basic">Basic</label>
+                        <input id="future-basic" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                    </div>
+                    <div class="input-component">
+                        <label for="future-hra">HRA</label>
+                        <input id="future-hra" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                    </div>
+                    <div class="input-component">
+                        <label for="future-epf">EPF</label>
+                        <input id="future-epf" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                    </div>
+                    <div class="input-component">
+                        <label for="future-gratuity">Gratuity</label>
+                        <input id="future-gratuity" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                    </div>
+                    <div class="input-component">
+                        <label for="future-extra">Special Allowance and Flexi Pay</label>
+                        <input id="future-extra" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                    </div>
+                </div>
+            </section>
+            <section class="hra">
+                <h2>HRA Exemption</h2>
+                <div class="component-group">
+                    <div class="input-component">
+                        <label for="is-metro">Do you live in a metro city?</label>
+                        <select name="metro" id="is-metro">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="input-component">
+                        <label for="rent">Total Rent Paid (P.A.)</label>
+                        <input id="rent" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required />
+                    </div>
+                </div>
+            </section>
+            <section class="investment-80c">
+                <h2>80C Investment</h2>
+                <div class="component-group">
+                    <div class="input-component">
+                        <label for="inv-mf">Mutual Fund / ELSS</label>
+                        <input id="inv-mf" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                    <div class="input-component">
+                        <label for="inv-ppf">PPF</label>
+                        <input id="inv-ppf" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                    <div class="input-component">
+                        <label for="inv-epf">EPF</label>
+                        <input id="inv-epf" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                    <div class="input-component">
+                        <label for="inv-lic">LIC</label>
+                        <input id="inv-lic" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                    <div class="input-component">
+                        <label for="inv-ssy">Sukanya Samruddhi Yojana</label>
+                        <input id="inv-ssy" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                    <div class="input-component">
+                        <label for="inv-ulip">ULIP</label>
+                        <input id="inv-ulip" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                    <div class="input-component">
+                        <label for="inv-fd">Fixed Deposite</label>
+                        <input id="inv-fd" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                    <div class="input-component">
+                        <label for="inv-homeloan">Housing Loan Principle</label>
+                        <input id="inv-homeloan" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                </div>
+            </section>
+            <section class="mediclaim">
+                <h2>Mediclaim</h2>
+                <div class="component-group">
+                    <div class="input-component">
+                        <label for="mediclaim-self">For Self & Family</label>
+                        <input id="mediclaim-self" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                    <div class="input-component">
+                        <label for="is-parentsage">Is parents age above 60?</label>
+                        <select name="metro" id="is-parentsage">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="input-component">
+                        <label for="mediclaim-parents">For Parents</label>
+                        <input id="mediclaim-parents" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                </div>
+            </section>
+            <section class="other-deductions">
+                <h2>Misc. Deductions</h2>
+                <div class="component-group">
+                    <div class="input-component">
+                        <label for="other-deductions">Other Deductions (Home Loan interest, NPS, Flexi Pay Amount, etc.)</label>
+                        <input id="other-deductions" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required/>
+                    </div>
+                </div>
+            </section>
+            <section class="action">
+                <button id="calculate" class="calculate">Calculate</button>
+                <button id="reset" class="reset">Reset</button>
+            </section>
+        </main>
+        <aside id="preview">
+            <h2>Preview</h2>
+            <div class="component-group">
+                <div class="input-component">
+                    <label for="total-income">Total Income </label>
+                    <input id="total-income" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="standard-deduction">Standard Deduction</label>
+                    <input id="standard-deduction" type="number" min="50000" max="50000" placeholder="50000" value="50000" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="professional-tax">Professional Tax</label>
+                    <input id="professional-tax" type="number" min="2500" max="2500" placeholder="2500" value="2500" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="deduction-80c">Deduction under 80C</label>
+                    <input id="deduction-80c" type="number" min="0" max="150000" placeholder="XX,XXX" value="0" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="hra-exception">House Rent Allowance</label>
+                    <input id="hra-exception" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="eepf">Eployer's Share in EPF</label>
+                    <input id="eepf" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="mediclaim-total">Mediclaim</label>
+                    <input id="mediclaim-total" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="gratuity-less">Gratuity</label>
+                    <input id="gratuity-less" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="other-total-deductions">Other Deductions</label>
+                    <input id="other-total-deductions" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                </div>
+                <div class="input-component">
+                    <label for="total-taxable-income">Total Taxable Income</label>
+                    <input id="total-taxable-income" type="number" min="0" max="10000000" placeholder="XX,XXX" value="0" required readonly/>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
