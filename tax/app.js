@@ -175,16 +175,6 @@ const app = function () {
         document.querySelector("#total-taxable-income").value = taxableIncome;
     }
 
-    const setupArriers = () => {
-        const basic = Number(document.querySelector("#salary-basic").value);
-        const hra = Number(document.querySelector("#salary-hra").value);
-        const epf = Number(document.querySelector("#salary-epf").value);
-        const extra = Number(document.querySelector("#salary-extra").value);
-
-        const arrCalc = (basic + hra + epf + extra) / 3;
-
-        document.querySelector("#arrears").value = Math.round(arrCalc);
-    }
     return {
         init: () => {
             document.querySelector("#fix-salary")
@@ -192,7 +182,6 @@ const app = function () {
                     function (e) {
                         setupFixSalary(e.target.value)
                         setupEPF();
-                        setupArriers();
                     }
                 );
 
